@@ -18,6 +18,7 @@ import CenteredSection from './CenteredSection';
 import Form from './Form';
 import Input from './Input';
 import Section from './Section';
+import {Button} from 'antd';
 import messages from './messages';
 import { loadRepos } from '../App/actions';
 import { changeUsername } from './actions';
@@ -57,6 +58,7 @@ export class HomePage extends React.PureComponent { // eslint-disable-line react
             <p>
               <FormattedMessage {...messages.startProjectMessage} />
             </p>
+            <Button type="primary">Welcome</Button>
           </CenteredSection>
           <Section>
             <H2>

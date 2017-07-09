@@ -2,7 +2,7 @@
  * DEVELOPMENT WEBPACK CONFIGURATION
  */
 
-const path = require('path');
+const path = require('path');a
 const fs = require('fs');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
