@@ -9,35 +9,38 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
-
-import Header from 'components/Header';
-import Footer from 'components/Footer';
+import {Layout} from 'antd';
+import AppBar from 'components/AppBar'
 import withProgressBar from 'components/ProgressBar';
+import 'tachyons/css/tachyons.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import 'assets/styles/app.less';
 
+import appConfig from 'appConfig';
+
 const AppWrapper = styled.div`
-  max-width: calc(768px + 16px * 2);
-  margin: 0 auto;
-  display: flex;
-  min-height: 100%;
-  padding: 0 16px;
-  flex-direction: column;
+  max-width: calc(1180px + 16px * 2);
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
 `;
 
 export function App(props) {
   return (
-    <AppWrapper>
+    <Layout style={{height:'100vh', overflow:'auto'}}>
+      <AppBar />
       <Helmet
-        titleTemplate="%s - React.js Boilerplate"
-        defaultTitle="React.js Boilerplate"
+        titleTemplate={`%s - ${appConfig.title}`}
+        defaultTitle={appConfig.title}
         meta={[
-          { name: 'description', content: 'A React.js Boilerplate application' },
+          { name: 'description', content: appConfig.title },
         ]}
-      />
-      <Header />
-      {React.Children.toArray(props.children)}
-      <Footer />
-    </AppWrapper>
+      />        
+      <AppWrapper>
+      {React.Children.toArray(props.children)}      
+      </AppWrapper>
+      
+    </Layout>
   );
 }
 
