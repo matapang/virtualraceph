@@ -14,11 +14,12 @@ import AppBar from 'components/AppBar';
 const SubMenu = Menu.SubMenu;
 const { Header, Content, Footer, Sider } = Layout;
 
-const ContentWrapper = styled(Content)`  
-  background: #aaa;
+const ContentWrapper = styled(Content)`    
   padding: 24;
   margin: 0;
   overflow:auto;
+  margin-bottom:64px;
+  
 `;
 class AppLayout extends React.Component {
   state = {
@@ -32,7 +33,7 @@ class AppLayout extends React.Component {
   render() {
     return (
         <Layout style={{height:'100vh', marginBottom:-64}}>
-          <Sider width={200} style={{ background: '#fff' }} >
+          <Sider width={200} style={{ background: '#fff', marginBottom:64 }} collapsible breakpoint="sm">
               <Menu
                 mode="inline"
                 style={{ height: '100%', borderRight: 0 }}>
@@ -40,7 +41,7 @@ class AppLayout extends React.Component {
             </Menu>
           </Sider>
           
-          <ContentWrapper >            
+          <ContentWrapper style={{padding:5}} >            
                {this.props.children}            
           </ContentWrapper>
           

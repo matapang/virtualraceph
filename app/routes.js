@@ -47,7 +47,7 @@ export default function createRoutes(store) {
           .catch(errorLoading);
       },
     }, {
-      path: '/user/:id',
+      path: '/dashboard',
       name: 'dashboard',
       getComponent(location, cb) {
         import('containers/Dashboard')
