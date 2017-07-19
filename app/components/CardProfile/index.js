@@ -3,7 +3,9 @@ import styled from 'styled-components';
 import TextInfo from 'components/TextInfo';
 import { Row, Col, Card, Avatar } from 'antd';
 import Button from 'components/Button';
+import AppLink from 'components/AppLink';
 import RunSummary from 'components/RunSummary';
+import { Link } from 'react-router';
 
 class CardProfile extends React.Component {
     constructor(props) {
@@ -19,11 +21,15 @@ class CardProfile extends React.Component {
                             <Avatar icon="user" shape="square" size="large" />                        
                             <div>
                                 <h2>{name}</h2>
-                                <TextInfo>{id}</TextInfo>
+                                <span>
+                                    <TextInfo>{id}</TextInfo>
+                                    &nbsp;&nbsp;&nbsp;
+                                    <AppLink> Following  <b>0</b></AppLink> | Followers <b>0</b>
+                                </span>
                             </div>
                     </Row>
                     <Row gutter={10}>
-                        <Col xs={12}> <Button type="primary"  > Submit Run</Button></Col>
+                        <Col xs={12}> <Link to="/submit-run"><Button type="primary" > Submit Run</Button></Link></Col>
                         <Col xs={12}><Button > Logs </Button></Col>
                     </Row>
 

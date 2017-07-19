@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {PropTypes} from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import appConfig from 'appConfig';
 
@@ -14,21 +14,28 @@ const Logo = styled.div`
   float: left;
 `;
 
-const AppBar = () => {
+const AppBar = (props) => {    
+    const {location} = props;
+    const pathname = location.pathname;
     return (
         <Layout.Header className="header">
             <Logo />
             <Menu
                 theme="dark"
                 mode="horizontal"
-                defaultSelectedKeys={['3']}
+                defaultSelectedKeys={pathname}
+                selectedKeys={pathname}
                 style={{ lineHeight: '64px', float:'right' }}
             >
-                <Menu.Item key="1"> <Link to="/features"> <Icon type="calendar"/> Races</Link></Menu.Item>
-                <Menu.Item key="2"><Link to="/feeds"> <Icon type="global"/> Feeds</Link></Menu.Item>
-                <Menu.Item key="3"> <Link to="/dashboard"> <Icon type="user"/> My Dashboard</Link></Menu.Item>
+                <Menu.Item key="/features"> <Link to="/features"> <Icon type="calendar"/> Races</Link></Menu.Item>
+                <Menu.Item key="/feeds"><Link to="/feeds"> <Icon type="global"/> Feeds</Link></Menu.Item>
+                <Menu.Item key="/dashboard"> <Link to="/dashboard"> <Icon type="user"/> My Dashboard</Link></Menu.Item>
             </Menu>
         </Layout.Header>);
+};
+
+AppBar.propTypes = {
+    location:PropTypes.object
 }
 
 export default AppBar;

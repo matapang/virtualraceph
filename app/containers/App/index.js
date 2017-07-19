@@ -25,10 +25,10 @@ const AppWrapper = styled.div`
   width:100%;
 `;
 
-export function App(props) {
+export function App(props) {  
   return (
     <Layout style={{height:'100vh', overflow:'auto'}}>
-      <AppBar />
+      <AppBar location={props.location} />
       <Helmet
         titleTemplate={`%s - ${appConfig.title}`}
         defaultTitle={appConfig.title}

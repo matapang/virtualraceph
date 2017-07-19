@@ -42,12 +42,12 @@ class CardRaces extends React.Component {
 
 CardRaces.defaultProps = {
     data: [
-        { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'https://virtual-race-submissions.s3-ap-southeast-1.amazonaws.com/images/4-web-banner-2000-900-001-jpeg-zyf19062017-124730' },
-        { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'https://virtual-race-submissions.s3-ap-southeast-1.amazonaws.com/images/4-web-banner-2000-900-001-jpeg-fdd11072017-95055' },
-        { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'https://virtual-race-submissions.s3-ap-southeast-1.amazonaws.com/images/4-web-banner-2000-900-001-jpeg-zyf19062017-124730' },
-        { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'https://virtual-race-submissions.s3-ap-southeast-1.amazonaws.com/images/4-web-banner-2000-900-001-jpeg-fdd11072017-95055' },
-        { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'https://virtual-race-submissions.s3-ap-southeast-1.amazonaws.com/images/4-web-banner-2000-900-001-jpeg-zyf19062017-124730' },
-        { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'https://virtual-race-submissions.s3-ap-southeast-1.amazonaws.com/images/4-web-banner-2000-900-001-jpeg-fdd11072017-95055' },
+        { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'http://lorempixel.com/400/200/sports/1' },
+        { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'http://lorempixel.com/400/200/sports/2' },
+        { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'http://lorempixel.com/400/200/sports/3' },
+        { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'http://lorempixel.com/400/200/sports/4' },
+        { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'http://lorempixel.com/400/200/sports/5' },
+        { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'http://lorempixel.com/400/200/sports/6' },
 
     ]
 };

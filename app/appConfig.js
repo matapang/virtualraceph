@@ -1,7 +1,6 @@
 export default {
-    message:{
-        title:'Virtual Run PH'        
-    },
+    
+    title:'Virtual Run PH',
 
     theme: {
         accent:'#FF4136',

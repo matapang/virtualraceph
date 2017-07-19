@@ -8,8 +8,6 @@ import React from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { Layout, Menu, Icon, Breadcrumb } from 'antd';
 import appConfig from 'appConfig';
-import H1 from 'components/H1';
-import AppBar from 'components/AppBar';
 
 const SubMenu = Menu.SubMenu;
 const { Header, Content, Footer, Sider } = Layout;

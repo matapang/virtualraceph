@@ -55,6 +55,22 @@ export default function createRoutes(store) {
           .catch(errorLoading);
       },
     }, {
+      path: '/feeds',
+      name: 'feeds',
+      getComponent(location, cb) {
+        import('containers/Feeds')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    }, {
+      path: '/submit-run',
+      name: 'submitRun',
+      getComponent(location, cb) {
+        import('containers/SubmitRun')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    }, {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {
