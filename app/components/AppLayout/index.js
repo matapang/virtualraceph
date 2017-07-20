@@ -30,7 +30,7 @@ class AppLayout extends React.Component {
 
   render() {
     return (
-        <Layout style={{height:'100vh', marginBottom:-64}}>
+        <Layout style={{height:'100vh', overflow:'hidden', marginBottom:-64}}>
           <Sider width={200} style={{ background: '#fff', marginBottom:64 }} collapsible breakpoint="sm">
               <Menu
                 mode="inline"

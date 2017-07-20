@@ -1,9 +1,10 @@
-import React, {PropTypes} from 'react';
+import React, { PropTypes } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import appConfig from 'appConfig';
 
-import { Menu, Layout, Icon } from 'antd';
+import { Menu, Layout, Icon, Col } from 'antd';
 import { Link } from 'react-router';
+import DivShow from 'components/DivShow';
 
 const Logo = styled.div`  
   width: 120px;
@@ -14,28 +15,32 @@ const Logo = styled.div`
   float: left;
 `;
 
-const AppBar = (props) => {    
-    const {location} = props;
+
+const AppBar = (props) => {
+    const { location } = props;
     const pathname = location.pathname;
     return (
         <Layout.Header className="header">
-            <Logo />
-            <Menu
-                theme="dark"
-                mode="horizontal"
-                defaultSelectedKeys={pathname}
-                selectedKeys={pathname}
-                style={{ lineHeight: '64px', float:'right' }}
-            >
-                <Menu.Item key="/features"> <Link to="/features"> <Icon type="calendar"/> Races</Link></Menu.Item>
-                <Menu.Item key="/feeds"><Link to="/feeds"> <Icon type="global"/> Feeds</Link></Menu.Item>
-                <Menu.Item key="/dashboard"> <Link to="/dashboard"> <Icon type="user"/> My Dashboard</Link></Menu.Item>
-            </Menu>
+                <Logo />
+
+            <DivShow aboveXs>
+                <Menu
+                    theme="dark"
+                    mode="horizontal"
+                    defaultSelectedKeys={pathname}
+                    selectedKeys={pathname}
+                    style={{ lineHeight: '64px', float: 'right' }}
+                >
+                    <Menu.Item key="/races"> <Link to="/races"> <Icon type="calendar" /> Races</Link></Menu.Item>
+                    <Menu.Item key="/feeds"><Link to="/feeds"> <Icon type="global" /> Feeds</Link></Menu.Item>
+                    <Menu.Item key="/dashboard"> <Link to="/dashboard"> <Icon type="user" /> My Dashboard</Link></Menu.Item>
+                </Menu>
+            </DivShow>
         </Layout.Header>);
 };
 
 AppBar.propTypes = {
-    location:PropTypes.object
+    location: PropTypes.object
 }
 
 export default AppBar;

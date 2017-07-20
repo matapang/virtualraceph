@@ -15,6 +15,12 @@ class CardRaces extends React.Component {
         super(props);
     }
 
+    onClick = (id) => {
+        if (this.props.onClick) {
+            this.props.onClick(id);
+        }
+    }
+
     render() {
         const { data } = this.props;
         console.log(data);
@@ -22,7 +28,7 @@ class CardRaces extends React.Component {
             <Row gutter={8}>                
                 {data.map((race, key) => 
                     <Col key={key} md={12} style={{marginBottom:5}}>
-                        <Card>
+                        <Card onClick={()=> this.onClick(race.id)}>
                             <CardImage>
                                 <img alt="example" width="100%" src={race.url} />
                             </CardImage>
@@ -42,8 +48,8 @@ class CardRaces extends React.Component {
 
 CardRaces.defaultProps = {
     data: [
-        { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'http://lorempixel.com/400/200/sports/1' },
-        { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'http://lorempixel.com/400/200/sports/2' },
+        { id:'spartan-challenge', title: 'Spartan Challenge', date: '2017-Aug-12', description: 'Spartan Challenge', url:'http://lorempixel.com/400/200/sports/1' },
+        { id:'takbo-marawi', title: 'Takbo Marawi', date: '2017-Aug-12', description: 'Spartan Challenge', url:'http://lorempixel.com/400/200/sports/2' },
         { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'http://lorempixel.com/400/200/sports/3' },
         { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'http://lorempixel.com/400/200/sports/4' },
         { title: 'Event 1', date: '2017-Aug-12', description: 'Spartan Challenge', url:'http://lorempixel.com/400/200/sports/5' },

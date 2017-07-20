@@ -5,6 +5,7 @@
  */
 
 import React, { PropTypes } from 'react';
+import { push } from 'react-router-redux';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import AppLayout from 'components/AppLayout';
@@ -22,7 +23,7 @@ export class Dashboard extends React.Component { // eslint-disable-line react/pr
         <div>
           <Tabs defaultActiveKey="1">
             <Tabs.TabPane tab="Current Races" key="1">
-              <CardRaces />
+              <CardRaces onClick={(raceId) =>  this.props.dispatch(push(`/races/${raceId}`))} />
             </Tabs.TabPane>
             <Tabs.TabPane tab="Past Races" key="2">Past Races</Tabs.TabPane>
           </Tabs>
