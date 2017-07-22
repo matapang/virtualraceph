@@ -70,7 +70,17 @@ export default function createRoutes(store) {
           .then(loadModule(cb))
           .catch(errorLoading);
       },
-    }, {
+    }, 
+     {
+      path: '/races',
+      name: 'races',
+      getComponent(location, cb) {
+        import('containers/Races')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },
+    {
       path: '/races/:id',
       name: 'races',
       getComponent(location, cb) {

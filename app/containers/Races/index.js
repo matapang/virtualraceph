@@ -5,15 +5,21 @@
  */
 
 import React, { PropTypes } from 'react';
+import { push } from 'react-router-redux';
 import { connect } from 'react-redux';
 import styled from 'styled-components';
 import AppLayout from 'components/AppLayout';
+import CardRaces from 'components/CardRaces';
 import raceRoutes from './routes';
 
 export class Races extends React.Component { // eslint-disable-line react/prefer-stateless-function
 
   renderRaces() {
-    const {id} = this.props.params; 
+    const {id} = this.props.params;
+    if (id == undefined) {
+      return <CardRaces  onClick={(raceId) =>  this.props.dispatch(push(`/races/${raceId}`))}  />
+    }
+
     const page = raceRoutes[id];
     if (page != undefined) {
       return page();

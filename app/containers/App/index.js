@@ -38,7 +38,7 @@ export function App(props) {
       />        
       <AppWrapper>
       {React.Children.toArray(props.children)}      
-      </AppWrapper>
+     </AppWrapper>
       
     </Layout>
   );
