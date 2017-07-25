@@ -22,6 +22,10 @@ export class Feeds extends React.Component { // eslint-disable-line react/prefer
           ]}
         />
         <CardPostFeed />
+        <CardPostFeed />
+        <CardPostFeed />
+        <CardPostFeed />
+        <CardPostFeed />
 
       </AppLayout>
     );

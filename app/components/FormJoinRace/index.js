@@ -6,10 +6,11 @@ import FormItem from 'components/FormItem';
 import UploadPhoto from 'components/UploadPhoto';
 import AppLink from 'components/AppLink'
 
+
 class FormJoinRace extends Component {
 
     handleSubmit = () => {
-        console.log("handles");
+        console.log("submit");
     }
 
     render() {
@@ -20,7 +21,7 @@ class FormJoinRace extends Component {
                     {/* First Name Last Name */}
                     <div>
                         <h3>Personal Information</h3>
-                        <hr />
+                        <hr/>
                         <Row gutter={10}>
                             <Col md={12} xs={24}>
                                 <FormItem label="First Name">
@@ -50,7 +51,7 @@ class FormJoinRace extends Component {
                     {/* Race Information */}
                     <div>
                         <h3>Race Information</h3>
-                        <hr />
+                          <hr/>
                         <Row gutter={10}>
                             <Col md={12} xs={24}>
                                 <FormItem label="Category">
@@ -81,7 +82,7 @@ class FormJoinRace extends Component {
                     {/* Mailing Address */}
                     <div>
                         <h3>Mailing Address</h3>
-                        <hr />
+                        <hr/>
                         <Row gutter={10}>
 
                             <Col xs={24}>
@@ -103,11 +104,11 @@ class FormJoinRace extends Component {
                         </Row>
                     </div>
 
-                    <AppLink to="/dashboard">
+                    
                         <Button type="primary" htmlType="submit">
                             Register
-                    </Button>
-                    </AppLink>
+                        </Button>
+                    
                 </FormWrapper>
             </Form>
         )
